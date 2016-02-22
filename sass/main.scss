@@ -1,0 +1,207 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/flexslider/flexslider.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
+
+/* Bootstrap Variables Goes Here */
+
+$brand-primary: #29a7e1 !default;
+$brand-success: #01cdc1 !default;
+$brand-warning: #ffef03 !default;
+$brand-danger: #f55928 !default;
+$brand-info: #ff3c8e !default;
+$brand-green: #35b24a !default;
+
+$background: #652d92 !default;
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@font-face {
+  font-family: "American Purpose";
+  src: url("../fonts/AmericanPurpose.ttf");
+}
+@font-face {
+  font-family: "Galano Grotesque Alt";
+  src: url("../fonts/Galano Grotesque Alt.otf");
+}
+@font-face {
+  font-family: "Galano Grotesque Alt";
+  src: url("../fonts/Galano Grotesque Alt Semi Bold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Galano Grotesque Alt";
+  src: url("../fonts/Galano Grotesque Alt Bold.otf");
+  font-weight: 700;
+}
+
+.primary {
+  color: $brand-primary;
+}
+.success {
+  color: $brand-success;
+}
+.warning {
+  color: $brand-warning;
+}
+.danger {
+  color: $brand-danger;
+}
+.info {
+  color: $brand-info;
+}
+.green {
+  color: $brand-green;
+}
+.dark {
+  color: black;
+}
+
+body {
+  font-family: "Galano Grotesque Alt";
+}
+
+img.loading {
+  text-align: center;
+  opacity: 1;
+  width: 32px !important;
+  height: auto;
+}
+img {
+  opacity: 0;
+  @include transition(all 300ms ease);
+}
+img.doneLoading {
+  opacity: 1;
+}
+nav li:hover .dropdown-menu {
+  display: block;
+}
+.fixed-width {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: $background;
+  color: white;
+  background-image: url("../img/bg.png");
+  background-size: 100%;
+}
+.logo {
+  padding: 50px 0 30px;
+  .img-responsive {
+    margin: 0 auto;
+  }
+}
+.title {
+  h1 {
+    -webkit-text-stroke: 1px white;
+    font-size: 58px;
+    font-family: 'American Purpose';
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.35);
+    @include transform(rotate(-1deg));
+  }
+}
+.title-desc {
+  p {
+    font-size: 20px;
+    font-family: 'American Purpose';
+    margin: 50px 20px 40px;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+.answer {
+    margin: 10px 0 25px;
+}
+.question {
+    font-size: 17px;
+    padding: 0px 30px;
+
+    input.form-control {
+        box-shadow: none !important;
+        border-radius: 0;
+        background-color: transparent;
+        border: none;
+        background: bottom left linear-gradient(#fff, #fff) no-repeat, bottom center linear-gradient(#fff, #fff) repeat-x, bottom right linear-gradient(#fff, #fff) no-repeat;
+        background: bottom left -webkit-linear-gradient(#fff, #fff) no-repeat, bottom center -webkit-linear-gradient(#fff, #fff) repeat-x, bottom right -webkit-linear-gradient(#fff, #fff) no-repeat;
+        background: bottom left -moz-linear-gradient(#fff, #fff) no-repeat, bottom center -moz-linear-gradient(#fff, #fff) repeat-x, bottom right -moz-linear-gradient(#fff, #fff) no-repeat;
+    	  background-size: 1px 6px, 1px 1px, 1px 6px;
+        outline: 0 !important;
+        color: white;
+    }
+    .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+        @include appearance(none);
+        @include transition(all 300ms ease);
+        border: 1px solid white;
+        height: 16px;
+        width: 16px;
+        margin: 2px 0 0px -20px;
+        outline: 0;
+
+        &:checked {
+          background-color: black;
+        }
+    }
+}
+.footer {
+  margin: 0 -20px;
+  padding: 10px;
+  background-color: white;
+}
+.social {
+  .nav {
+    > li {
+      > a {
+          padding: 0;
+          color: black;
+
+          &:hover, &:focus {
+            background-color: inherit;
+          }
+      }
+    }
+  }
+}
+.box-input {
+  margin: 0 -20px;
+  border: 5px solid $brand-danger;
+  padding: 20px 40px;
+  background-color: #4a1972;
+  margin-bottom: 50px;
+
+  label {
+    font-weight: normal;
+    color: $brand-warning;
+  }
+  input.form-control {
+      box-shadow: none !important;
+      border-radius: 0;
+      background-color: $background;
+      border-color: white;
+      outline: 0 !important;
+      color: white;
+  }
+  .btn {
+    @include transition(all 300ms ease);
+    border-radius: 0px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    background-color: #eb1c22;
+    border: 2px white solid;
+    box-shadow: 1px 1px 1px black;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+  }
+}
+.footer {
+  .dark {
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+}
+/* Start writing sass here */
