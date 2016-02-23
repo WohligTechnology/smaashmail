@@ -5,7 +5,6 @@ var firstapp = angular.module('firstapp', [
   'templateservicemod',
   'navigationservice'
 ]);
-
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
@@ -18,8 +17,6 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
-
-
 firstapp.directive('img', function($compile, $parse) {
   return {
     restrict: 'E',

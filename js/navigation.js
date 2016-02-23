@@ -6,9 +6,7 @@ if(isproduction)
 else {
   adminURL = "http://localhost/demo/index.php";
 }
-
 var navigationservice = angular.module('navigationservice', [])
-
 .factory('NavigationService', function() {
   var navigation = [{
     name: "Home",
@@ -20,7 +18,6 @@ var navigationservice = angular.module('navigationservice', [])
       link: "#/home"
     }]
   }];
-
   return {
     getnav: function() {
       return navigation;
@@ -35,6 +32,5 @@ var navigationservice = angular.module('navigationservice', [])
       }
       return menuname;
     },
-
   };
 });
