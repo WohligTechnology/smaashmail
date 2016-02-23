@@ -7,7 +7,7 @@ else {
   adminURL = "http://localhost/demo/index.php";
 }
 var navigationservice = angular.module('navigationservice', [])
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Home",
     classis: "active",
@@ -32,5 +32,8 @@ var navigationservice = angular.module('navigationservice', [])
       }
       return menuname;
     },
+    submitForm : function(form,callback) {
+      $http.post("http://wohlig.co.in/smash/index.php/json/reviewSubmit",form).success(callback);
+    }
   };
 });
