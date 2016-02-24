@@ -1,11 +1,3 @@
-var adminURL = "";
-if(isproduction)
-{
-  adminURL =  "http://www.wohlig.co.in/demo/index.php";
-}
-else {
-  adminURL = "http://localhost/demo/index.php";
-}
 var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function($http) {
   var navigation = [{
@@ -33,7 +25,7 @@ var navigationservice = angular.module('navigationservice', [])
       return menuname;
     },
     submitForm : function(form,callback) {
-      $http.post("http://wohlig.co.in/smash/index.php/json/reviewSubmit",form).success(callback);
+      $http.post("http://moviewsapp.com/smashback/index.php/json/reviewSubmit",form).success(callback);
     }
   };
 });
