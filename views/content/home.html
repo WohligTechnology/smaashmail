@@ -46,15 +46,15 @@
     <span class="bold">What is the Average Team Size for the Team Outings/ Get-Together?</span>
     <div class="answer">
       <label class="radio-inline">
-        <input type="radio" id="ten" ng-model="teamsize" value="10to25" name="team1" required>
+        <input type="radio" id="ten" ng-model="form.teamsize" value="10to25" name="team1" required>
         10 to 25
       </label>
       <label class="radio-inline">
-        <input type="radio" id="twofive" ng-model="teamsize" value="25to50" name="team1" required>
+        <input type="radio" id="twofive" ng-model="form.teamsize" value="25to50" name="team1" required>
         25 to 50
       </label>
       <label class="radio-inline">
-        <input type="radio" id="fifty" ng-model="teamsize" value="50+" name="team1" required>
+        <input type="radio" id="fifty" ng-model="form.teamsize" value="50+" name="team1" required>
         50+
       </label>
     </div>
@@ -62,28 +62,28 @@
   <div class="question">
     <span class="bold">Where did you host your last Team Get-Together?</span>
     <div class="answer">
-      <input type="text" ng-model="lastlocation" class="form-control" required>
+      <input type="text" ng-model="form.lastlocation" class="form-control" required>
     </div>
   </div>
   <div class="question">
     <span class="bold">When are you planning to host your next event?</span>
     <div class="answer">
-      <input type="text" ng-model="nextlocation" class="form-control" required>
+      <input type="text" ng-model="form.nextlocation" class="form-control" required>
     </div>
   </div>
   <div class="question">
     <span class="bold">Have you heard about Smaaash Entertainment?</span>
     <div class="answer">
       <label class="radio-inline">
-        <input type="radio" id="yes" value="yes" name="team2" ng-model="knowssmash" required>
+        <input type="radio" id="yes" value="yes" name="team2" ng-model="form.knowssmash" required>
         Yes
       </label>
       <label class="radio-inline">
-        <input type="radio" id="no" value="no" name="team2" ng-model="knowssmash" required>
+        <input type="radio" id="no" value="no" name="team2" ng-model="form.knowssmash" required>
         No
       </label>
       <label class="radio-inline">
-        <input type="radio" id="cant" value="cant recall" name="team2" ng-model="knowssmash" required>
+        <input type="radio" id="cant" value="cant recall" name="team2" ng-model="form.knowssmash" required>
         Can't Recall
       </label>
     </div>
@@ -92,15 +92,15 @@
     <span class="bold">Would you like to host you next Team Outing / Party at Smaaash?</span>
     <div class="answer">
       <label class="radio-inline">
-        <input type="radio" id="yes1" value="yes" name="team3" ng-model="hostwithsmash" required>
+        <input type="radio" id="yes1" value="yes" name="team3" ng-model="form.hostwithsmash" required>
         Yes
       </label>
       <label class="radio-inline">
-        <input type="radio" id="no1" value="no" name="team3" ng-model="hostwithsmash" required>
+        <input type="radio" id="no1" value="no" name="team3" ng-model="form.hostwithsmash" required>
         No
       </label>
       <label class="radio-inline">
-        <input type="radio" id="maybe" value="cant recall" name="team3" ng-model="hostwithsmash" required>
+        <input type="radio" id="maybe" value="cant recall" name="team3" ng-model="form.hostwithsmash" required>
         Maybe
       </label>
     </div>
@@ -110,25 +110,25 @@
       <div class="col-xs-6">
         <div class="form-group">
           <label>Name*</label>
-          <input type="text" class="form-control" ng-model="name" required>
+          <input type="text" class="form-control" ng-model="form.name" required>
         </div>
         <div class="form-group">
           <label>Phone No*</label>
-          <input type="tel" class="form-control" ng-model="phone" required>
+          <input type="tel" class="form-control" ng-model="form.phone" required>
         </div>
         <div class="form-group">
           <label>Name of Organisation</label>
-          <input type="text" class="form-control" ng-model="organization">
+          <input type="text" class="form-control" ng-model="form.organization">
         </div>
       </div>
       <div class="col-xs-6">
         <div class="form-group">
           <label>Email id*</label>
-          <input type="email" class="form-control" ng-model="email" required>
+          <input type="email" class="form-control" ng-model="form.email" required>
         </div>
         <div class="form-group">
           <label>Designation</label>
-          <input type="text" class="form-control" ng-model="designation">
+          <input type="text" class="form-control" ng-model="form.designation">
         </div>
       </div>
     </div>
