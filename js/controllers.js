@@ -6,11 +6,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.form = {};
-    $scope.formsubmit = function(form) {
-      NavigationService.submitForm(form, function(data) {
-        $scope.formComplete = true;
-        console.log(data);
-      });
+    $scope.formsubmit = function(form,formValid) {
+      if(formValid.$valid)
+      {
+        NavigationService.submitForm(form, function(data) {
+          $scope.formComplete = true;
+          console.log(data);
+        });
+      }
+      else {
+        $scope.formInvalid = true;
+      }
+
     };
   })
   .controller('headerctrl', function($scope, TemplateService) {

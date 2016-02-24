@@ -1,4 +1,4 @@
-<div class="greetings">
+<div class="greetings" ng-show="formComplete">
   <div class="title danger text-center">
     <h1>​ World Class Sports
       <br>
@@ -12,8 +12,8 @@
   </div>
 </div>
 
-<form ng-submit="formsubmit(form)">
-  <div class="validator-message" ng-show="">Please complete the survey!</div>
+<form name="formValid" ng-hide="formComplete">
+  <div class="validator-message" ng-show="formInvalid">Please complete the survey!</div>
   <div class="title danger text-center">
     <h1>​ World Class Sports
       <br>
@@ -132,6 +132,6 @@
         </div>
       </div>
     </div>
-    <button type="submit" name="button" class="btn btn-danger">Submit</button>
+    <button ng-click="formsubmit(form,formValid)" name="button" class="btn btn-danger">Submit</button>
   </div>
   </form>
