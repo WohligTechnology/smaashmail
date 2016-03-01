@@ -124,6 +124,13 @@ nav li:hover .dropdown-menu {
     @include transform(rotate(-2deg));
   }
 }
+.title-descp {
+  p {
+    font-size: 20px;
+    margin: 20px 20px 50px;
+    @include transform(rotate(-2deg));
+  }
+}
 
 .bold {
   font-weight: 600;
