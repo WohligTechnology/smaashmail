@@ -1,11 +1,10 @@
 <div class="greetings" ng-show="formComplete">
-  <div class="title danger text-center">
-    <h1>​ World Class Sports
-      <br>
-      &amp; Entertainment Arena
+  <div class="title blue text-center">
+    <h1>
+      <img src="img/sport_park.png" alt="India's First Urban Sports Park" class="img-responsive" />
     </h1>
   </div>
-  <div class="title-desc text-center success">
+  <div class="title-desc text-center">
     <p>
       Thank you for your time!
     </p>
@@ -14,13 +13,12 @@
 
 <form name="formValid" ng-hide="formComplete">
   <div class="validator-message" ng-show="formInvalid">Please complete the survey!</div>
-  <div class="title danger text-center">
-    <h1>​ World Class Sports
-      <br>
-      &amp; Entertainment Arena
+  <div class="title blue text-center">
+    <h1>
+      <img src="img/sport_park.png" alt="India's First Urban Sports Park" class="img-responsive" />
     </h1>
   </div>
-  <div class="title-desc text-center success">
+  <div class="title-desc text-center">
     <p>
       Smaaash offers unmatched range of games that offer a superlative virtual-reality experience. We combine the best of sports, music and dining into a highly Innovative experience, making it the ulitmate desitnation for Hosting Parties.
     </p>
@@ -129,9 +127,14 @@
         <div class="form-group">
           <label>Designation</label>
           <input type="text" class="form-control" ng-model="form.designation">
+        </div><br>
+        <button ng-click="formsubmit(form,formValid)" name="button" class="submit-button">Submit</button>
+      </div>
+      <div class="col-xs-12">
+        <div class="logo">
+          <img src="img/logo.png" alt="" class="img-responsive">
         </div>
       </div>
     </div>
-    <button ng-click="formsubmit(form,formValid)" name="button" class="btn btn-danger">Submit</button>
   </div>
   </form>
